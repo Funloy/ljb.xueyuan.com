@@ -1,0 +1,29 @@
+{
+    "_id" : "5c273a9bf69e8cacb2ff604f",
+    "userID" : "5bf6630d497c7101bca11fc1",
+    "courseID" : "5c13794288219d1792d1c0ee",
+    "lessionID" : "5c25e7e188219d6383966d06",
+    "videos":[
+        {
+            "videoID":"5c25e7e188219d6383966d06",
+            "status":2      // 0,2
+        },
+        {
+            "videoID":"5c25e7e188219d63839666ee",
+            "status":2              
+        }
+    ],
+    "exercise":{
+        "answer":"json",
+        "status":2                   
+    }
+}
+
+
+{
+    "courseID":"5c25e7e188219d63839666ee",
+    "name":"",
+    "icon":"",
+    "finishItemID": "5c25e7e188219d63839666ee",
+    "curItem_id":"5c25e7e188219d63839666ee",
+}

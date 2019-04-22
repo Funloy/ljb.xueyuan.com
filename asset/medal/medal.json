@@ -1,0 +1,52 @@
+{
+  "title": "用户勋章",
+  "medals": [
+    {
+      "type": "sign",
+      "entities": [
+        {
+          "name": "勤奋好学",
+          "days": 2,
+          "image": "asset/medal/sign/sign-2-day.svg",
+          "description": "连续2天签到，荣获勤奋好学勋章"
+        },
+        {
+          "name": "孜孜不倦",
+          "days": 7,
+          "image": "asset/medal/sign/sign-7-day.svg",
+          "description": "连续7天签到，荣获孜孜不倦勋章"
+        },
+        {
+          "name": "韦编三绝",
+          "days": 14,
+          "image": "asset/medal/sign/sign-14-day.svg",
+          "description": "连续14天签到，荣获韦编三绝勋章"
+        }
+      ]
+    },
+    {
+      "type": "calculus",
+      "entities": [
+        {
+          "name": "天天向上",
+          "calculus": [500,999],
+          "image": "asset/medal/calculus/calculus_500.svg",
+          "description": "你是一个爱学习的学生"
+        },
+        {
+          "name": "好好学习",
+          "calculus": [1000,2999],
+          "image": "asset/medal/calculus/calculus_1000.svg",
+          "description": "你是一个好学的学生"
+        },
+
+        {
+          "name": "学霸",
+          "calculus": [3000,4999],
+          "image": "asset/medal/calculus/calculus_3000.svg",
+          "description": "你是一个学霸"
+        }
+      ]
+    }
+  ]
+}

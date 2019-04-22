@@ -1,0 +1,45 @@
+{
+    "_id" : "5c137a7288219d1792d1c0f4",
+    "version" : "1.0.0",
+    "relpath" : "asset/courses/5c137a7288219d1792d1c0f4/编程化3D创意设计 A级",
+    "icon" : "asset/courses/5c137a7288219d1792d1c0f4/编程化3D创意设计 A级/编程化3D创意.png",
+    "name" : "编程化3D创意设计A级",
+    "download_url" : "http://192.168.2.100:9999/api/download/courses/%E7%BC%96%E7%A8%8B%E5%8C%963D%E5%88%9B%E6%84%8F%E8%AE%BE%E8%AE%A1%20A%E7%BA%A7.tar",
+    "desc" : "",
+    "installed" : false,
+    "purchased" : true,
+    "basepath": "http://allinfun.cn/maiyajia",
+    "category" : "智能硬件",
+    "lessions" : [ 
+        {
+            "_id" : "5c13816588219d51ca5e9fe3",
+            "name" : "第1节 初识编程建模001",
+            "question_url":"http://192.168.2.100:9999/api/download/courses/%E7%BC%9",
+            "icon_url" : "asset/courses/5c137a7288219d1792d1c0f4/编程化3D创意设计 A级/第1节 初识编程建模001/编程化3D创意.png",
+            "contents":[
+                {
+                    "id":"5c13816536419d51ca5e9fe3",
+                    "video_name":"初识编程建",
+                    "video_url":"asset/courses/5c137a7288219d17",
+                    "md_url" : "https://allinfun.cn/maiyajia/courses/编程/第一节课/md文件夹名/xxx.md"
+                }
+            ]
+        }, 
+        {
+            "_id" : "5c13816588219d51ca5e9fe4",
+            "name" : "第2节 水杯的制作002",
+            "question_url":"http://192.168.2.100:9999/api/download/courses/%E7%BC%9",
+            "icon_url" : "asset/courses/5c137a7288219d1792d1c0f4/编程化3D创意设计 A级/第1节 初识编程建模001/编程化3D创意.png",
+            "contents":[
+                {
+                    "_id":"5c13816698219d51ca5e9fe3",
+                    "video_name":"初识编程建",
+                    "video_url":"asset/courses/5c137a7288219d17",
+                    "md_url" : "asset/courses/5c137a7288219d1792d1c0f4/编程化3D创意设计 A级/第1节 初识编程建模001/第1节 初识编程建模.md"
+                }
+            ]
+        }
+    ],
+    "createTime" : 1544780402,
+    "browse" : 3
+}
