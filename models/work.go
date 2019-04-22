@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/logs"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"maiyajia.com/services/mongo"
@@ -453,8 +452,7 @@ func (workMod *WorkModels) CopyWork(work WorkBody, userID, id, name string, newi
 }
 
 // NewWork 初始化新的作品信息
-func NewWork(id, userID bson.ObjectId, contentID, name, tool, types, relpath, picture, description, data, toolurl, category string) *WorkBody {
-	logs.Info("5c36f60688219d2a7f323b80", contentID)
+func NewWork(id, userID bson.ObjectId, contentID, name, tool, types, relpath, picture, description, data, toolurl, category string, public bool) *WorkBody {
 	if !bson.IsObjectIdHex(contentID) {
 		contentID = NewID()
 	}
@@ -469,6 +467,7 @@ func NewWork(id, userID bson.ObjectId, contentID, name, tool, types, relpath, pi
 			Types:       types,
 			ContentID:   bson.ObjectIdHex(contentID),
 		},
+		Public:     public,
 		Relpath:    relpath,
 		ToolURL:    toolurl,
 		CreateTime: time.Now().Unix(),

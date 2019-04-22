@@ -105,7 +105,7 @@ func (workCtrl *WorksController) PostDescription() {
 		name := workContent.ID.Hex() + ".stl"
 		relpath = path.Join("asset", "works", name)
 	}
-	newWorkContent := m.NewWork(workContent.ID, workContent.UserID, workContent.ContentID.Hex(), workContent.Name, workContent.Tool, workContent.Types, relpath, workContent.Picture, workContent.Description, workContent.Data, workContent.ToolURL, workContent.Category)
+	newWorkContent := m.NewWork(workContent.ID, workContent.UserID, workContent.ContentID.Hex(), workContent.Name, workContent.Tool, workContent.Types, relpath, workContent.Picture, workContent.Description, workContent.Data, workContent.ToolURL, workContent.Category, workContent.Public)
 
 	if err := workCtrl.workMod.RegisteredWork(newWorkContent); err != nil {
 
@@ -788,7 +788,7 @@ func (workCtrl *WorksController) Save3DOne() {
 		workCtrl.abortWithError(m.ERR_REQUEST_PARAM)
 	}
 	logs.Info("workContent.ContentID:", workContent.ContentID)
-	newWorkContent := m.NewWork(bson.ObjectIdHex(workid), bson.ObjectIdHex(token.UserID), workContent.ContentID, workContent.Name, workContent.Tool, workContent.Types, relpath, workContent.Picture, workContent.Description, workContent.Data, workContent.ToolURL, workContent.Category)
+	newWorkContent := m.NewWork(bson.ObjectIdHex(workid), bson.ObjectIdHex(token.UserID), workContent.ContentID, workContent.Name, workContent.Tool, workContent.Types, relpath, workContent.Picture, workContent.Description, workContent.Data, workContent.ToolURL, workContent.Category, workContent.Public)
 	if err := workCtrl.workMod.RegisteredWork(newWorkContent); err != nil {
 		logs.Info(err)
 		workCtrl.abortWithError(m.ERR_ADD_WORK_FAIL)
