@@ -847,7 +847,7 @@ func (courseMod *CourseModels) GetCoursesByCategory(paging PagingInfo, category 
 	offset := paging.Offset()
 	limit := paging.Limit()
 	f := func(col *mgo.Collection) error {
-		return col.Find(bson.M{"category": category}).Select(bson.M{"lessions": 0}).Limit(limit).Skip(offset).All(&courses)
+		return col.Find(bson.M{"category": category}).Select(bson.M{"lessions": 0}).Sort("-browse").Limit(limit).Skip(offset).All(&courses)
 	}
 	err := courseMod.MgoSession.Do(beego.AppConfig.String("MongoDB"), "course", f)
 	return courses, err

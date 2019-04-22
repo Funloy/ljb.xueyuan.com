@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"time"
 
 	"github.com/astaxie/beego/logs"
 	"github.com/gorilla/websocket"
@@ -339,14 +338,11 @@ func (courseCtrl *CouresController) GetCourses() {
 	if err != nil {
 		logs.Error("QueryCoursesCount err :", err)
 	}
-	startTime := time.Now().Unix()
 	courses, err := courseCtrl.CourseMod.GetAllCourses(paging)
 	if err != nil {
 		logs.Error("GetCourses err：", err)
 		courseCtrl.abortWithError(m.ERR_COURSE_MESSAGE_QUERY_FAIL)
 	}
-	endTime := time.Now().Unix()
-	logs.Info("GetAllCourses time:", endTime-startTime)
 	// 封装返回数据
 	out := make(map[string]interface{})
 	out["code"] = 0
